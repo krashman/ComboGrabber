@@ -73,7 +73,7 @@ namespace ComboGrabber
         #endregion
 
         #region FindCombosInHTML
-        public async void FindCombos()
+        public async Task FindCombos()
         {
             using (WebClient wc = new WebClient())
             {
