@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -36,13 +36,11 @@ namespace ComboGrabber
             this.Form = Form;
         }
 
-        public async Task<int> Scrape()
+        public async void Scrape()
         {
             LoadPastebinURLs();
 
             await FindCombos();
-
-            return 0;
         }
 
         #region LoadPastebinURLs
@@ -75,7 +73,7 @@ namespace ComboGrabber
         #endregion
 
         #region FindCombosInHTML
-        public async Task<int> FindCombos()
+        public async void FindCombos()
         {
             using (WebClient wc = new WebClient())
             {
@@ -114,8 +112,6 @@ namespace ComboGrabber
                     }
                 }
             }
-
-            return 0;
         }
         #endregion
     }
