@@ -36,7 +36,7 @@ namespace ComboGrabber
             this.Form = Form;
         }
 
-        public async void Scrape()
+        public async Task Scrape()
         {
             LoadPastebinURLs();
 
